@@ -182,11 +182,11 @@ class Sudoku {
 
   List<List<SudokuRegion>> board;
 
-  static Sudoku random([int iteration = 5]) {
+  static Sudoku random() {
     Sudoku sudoku = Sudoku(board: _base).copy();
-    for (int i = 0; i < iteration; i++) {
-      sudoku.shuffle();
-    }
+
+    sudoku.shuffle();
+
     return sudoku;
   }
 
